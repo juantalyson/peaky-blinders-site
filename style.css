@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* =============================
+   Header e Navbar Brand (Tipografia) 
+   ============================= */
+header, .navbar-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #fff;
+  height: 60px;
+  padding: 0.5rem 1rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+}
+
+/* =============================
+   Base Reset e Estilo Global
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #e5e5e5;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f0f0f0;
+}
+
+/* =============================
+   Galeria - Portfolio
+   ============================= */
+#portfolio [class*="container-"] .portfolio-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 2px solid #2a2a2a;
+  border-radius: 8px;
+}
+
+#portfolio [class*="container-"] .portfolio-box img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+#portfolio [class*="container-"] .portfolio-box:hover img {
+  transform: scale(1.02);
+}
+
+#portfolio [class*="container-"] .portfolio-box .portfolio-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(222, 217, 213, 0.597);
+  transition: opacity 0.25s ease;
+}
+
+#portfolio [class*="container-"] .portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+#portfolio [class*="container-"] .portfolio-box .portfolio-box-caption .project-category {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#portfolio [class*="container-"] .portfolio-box .portfolio-box-caption .project-name {
+  font-size: 1.2rem;
+}
+
+/* =============================
+   Accordion (Acordeão) - Dark Curiosidades
+   ============================= */
+#curiosidades {
+  background-color: #212529;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+#curiosidades h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+#curiosidades .accordion-item {
+  background-color: #343a40;
+  border: 1px solid #454d55;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+#curiosidades .accordion-button {
+  background-color: #343a40;
+  color: #e9ecef;
+  border: none;
+}
+
+#curiosidades .accordion-button:not(.collapsed) {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+#curiosidades .accordion-button::after {
+  filter: invert(1);
+}
+
+#curiosidades .accordion-body {
+  background-color: #212529;
+  color: #dee2e6;
+  border-top: 1px solid #454d55;
+}
+
+#curiosidades .accordion-button:hover {
+  background-color: #3e444a;
+}
+
+#curiosidades .accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  border-color: #6c757d;
+}
+
+/* =============================
+   Tabs - Personagens
+   ============================= */
+.nav-tabs .nav-link {
+  background-color: #1c1c1c;
+  color: #bbbbbb;
+  border: 1px solid #2a2a2a;
+  border-radius: 0;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #292929;
+  color: #ffffff;
+  border-bottom-color: transparent;
+}
+
+.tab-content {
+  background-color: #181818;
+  padding: 1.5rem;
+  border: 1px solid #2a2a2a;
+  color: #d8d8d8;
+}
+
+/* =============================
+   Cards de Elenco
+   ============================= */
+.carousel-horizontal {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-elenco {
+  background-color: #1b1b1b;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 250px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.card-elenco:hover {
+  transform: scale(1.03);
+}
+
+.card-elenco a img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+  filter: brightness(0.95);
+}
+
+.card-elenco a:hover img {
+  filter: brightness(1.1);
+}
+
+.card-body {
+  background-color: #222;
+  padding: 1rem;
+  color: #e0e0e0;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+/* =============================
+   Responsividade
+   ============================= */
+@media (max-width: 768px) {
+  .card-elenco {
+    min-width: 200px;
+  }
+
+  .card-elenco a img,
+  .card-img-top {
+    height: 350px;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =============================
+   Estilo exclusivo para Login (Dark Background)
+   ============================= */
+body.login-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #212529;
+  color: #e0e0e0;
+}
+
+.box-area {
+  width: 900px;
+  background-color: #343a40;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.left-box {
+  background-color: #343a40;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.left-box img {
+  width: 180px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.left-box h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.left-box p {
+  font-size: 1rem;
+  color: #ced4da;
+  max-width: 180px;
+}
+
+.right-box {
+  padding: 40px 30px 40px 40px;
+  color: #e0e0e0;
+  background-color: #495057;
+}
+
+form .form-control {
+  background-color: #6c757d;
+  border: none;
+  color: #f8f9fa;
+}
+
+form .form-control:focus {
+  background-color: #6c757d;
+  color: #fff;
+  box-shadow: none;
+  border: 1px solid #adb5bd;
+}
+
+input::placeholder {
+  font-size: 15px;
+  color: #dee2e6;
+}
+
+.rounded-4 {
+  border-radius: 12px !important;
+  background-color: #495057;
+}
+
+.rounded-5 {
+  border-radius: 20px !important;
+  background-color: #495057;
+}
+
+.special {
+  background-color: #f4623a;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.special:hover {
+  background-color: #e65100;
+}
+
+.btn-light {
+  background-color: #adb5bd;
+  color: #212529;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #ced4da;
+}
+
+/* Links "Cadastre-se" e "Esqueceu sua senha?" em azul claro */
+.right-box a {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
+.right-box a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .box-area {
+    margin: 20px;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .left-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .right-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .left-box img {
+    width: 150px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
