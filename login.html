@@ -8,36 +8,36 @@
   <link rel="stylesheet" href="style.css">
   <title>Login</title>
 </head>
-<body>
+
 <body class="login-page">
 
   <div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+    <div class="row box-area rounded-5 shadow">
 
       <!-- LADO ESQUERDO -->
-      <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #0B1E26;">
+      <div class="col-md-6 left-box d-flex flex-column justify-content-center align-items-center p-4 rounded-start-5">
         <div class="featured-image mb-3">
-          <img src="img/105962-1920x1280-desktop-hd-peaky-blinders-wallpaper-photo.jpg" class="img-fluid" style="width: 250px;">
+          <img src="img/105962-1920x1280-desktop-hd-peaky-blinders-wallpaper-photo.jpg" class="img-fluid rounded" style="width: 250px;">
         </div>
-        <p class="text-white fs-2 fw-semibold" style="letter-spacing: 3px;">Trabalho Prático Site com Bootstrap</p>
-        <small class="text-white text-wrap text-center" style="width: 17rem">Tenha um breve resume da série Peaky Blinders.</small>
+        <p class="text-white fs-2 fw-semibold text-center" style="letter-spacing: 3px;">Trabalho Prático Site com Bootstrap</p>
+        <small class="text-white text-wrap text-center" style="max-width: 17rem">Tenha um breve resumo da série Peaky Blinders.</small>
       </div>
 
       <!-- LADO DIREITO COM FORMULÁRIO -->
-      <div class="col-md-6 right-box">
+      <div class="col-md-6 right-box rounded-end-5">
         <div class="row align-items-center">
           <div class="header-text mb-4">
             <h2>Olá, novamente</h2>
             <p>Estamos felizes por ter você de volta.</p>
           </div>
 
-          <!-- FORMULÁRIO REAL -->
+          <!-- FORMULÁRIO -->
           <form action="index.html" method="get">
             <div class="input-group mb-3">
-              <input type="email" name="email" class="form-control form-control-lg bg-light fs-6" placeholder="E-mail" required>
+              <input type="email" name="email" class="form-control form-control-lg rounded-4" placeholder="E-mail" required>
             </div>
             <div class="input-group mb-1">
-              <input type="password" name="senha" class="form-control form-control-lg bg-light fs-6" placeholder="Senha" required>
+              <input type="password" name="senha" class="form-control form-control-lg rounded-4" placeholder="Senha" required>
             </div>
             <div class="input-group mb-5 d-flex justify-content-between">
               <div class="form-check">
@@ -49,11 +49,11 @@
               </div>
             </div>
             <div class="input-group mb-3">
-              <button type="submit" class="btn btn-lg btn-primary w-100 fs-6 special">Entrar</button>
+              <button type="submit" class="btn btn-lg w-100 special">Entrar</button>
             </div>
           </form>
 
-          <!-- LOGIN COM GOOGLE (visual) -->
+          <!-- LOGIN COM GOOGLE -->
           <div class="input-group mb-3">
             <button class="btn btn-lg btn-light w-100 fs-6" type="button">
               <img src="img/google.png" style="width:20px" class="me-2">
